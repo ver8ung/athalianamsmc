@@ -8,12 +8,13 @@ Created on Thu Nov 29 11:26:54 2018
 import os
 from subprocess import call
 print(os.getcwd() + "\n")
-outdir = "output/";
+outdir = "output/msmc/";
 input_directory = "/data/home/users/m.ruscheweyh/pythontest/input/"
-haplotypes_madeira = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]
+hap_mad = list(range(28))
+hap_mad1 = hap_mad[0:1]
 for filename in os.listdir(input_directory):
     if filename.endswith(".multihetsep.txt"):
-        call (["./msmc_1.1.0_linux64bit","-I0,1","-p1*2+15*1+1*2","-o",outdir+filename,filename])
+        call (["./msmc_1.1.0_linux64bit","-I",hap_mad1,"-p1*2+15*1+1*2","-o",outdir+filename,filename])
     else:
          print("Specify valid input files.")
     

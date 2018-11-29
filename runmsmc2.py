@@ -8,7 +8,7 @@ Created on Thu Nov 29 11:26:54 2018
 import os
 from subprocess import call
 print(os.getcwd() + "\n")
-outdir = "output/";
+outdir = "output/msmc2/";
 input_directory = "/data/home/users/m.ruscheweyh/pythontest/input/"
 haplotypes_madeira = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]
 for filename in os.listdir(input_directory):
