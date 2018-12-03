@@ -20,25 +20,25 @@ for filename in os.listdir(input_directory):
             hap_counter+= 1
             call (["./msmc2_linux64bit","-I6,7","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s' %(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I8,9","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I8,9","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I10,11","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I10,11","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I12,13","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I12,13","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I14,15","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I14,15","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I16,17","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I16,17","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I18,19","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I18,19","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I20,21","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I20,21","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I22,23","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I22,23","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I24,25","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I24,25","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter+= 1
-            call (["./msmc2_linux64bit","-I26,27","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename)+filename,filename])
+            call (["./msmc2_linux64bit","-I26,27","-p1*2+15*1+1*2","-o",outdir+'2hap'+'%02d_%s'%(hap_counter,filename),filename])
             hap_counter = 1
     else:
         print("Specify valid input files.")
