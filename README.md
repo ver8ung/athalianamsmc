@@ -8,7 +8,4 @@ features up until now:
 - run MSMC on .multihetsep.txt files
 - fixed time segmenting pattern for single chromosome runs
 - counts runs and appends a number to the output
-- use -I as a variable
-
-ToDo:
--increasing counts for I
+- use -I as a variable with increasing counts for 2 hap (ToDo: 4 hap 6 hap 8 hap configuration)
