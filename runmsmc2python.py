@@ -29,30 +29,28 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
     if filename.endswith(".multihetsep.txt"): # call MSMC2 with desired parameters on specified input files
       while hap_counter < 27:
               outputprefix = filename[:23] + '.msmc2'   # use only desired positions of input filenames as output prefix
-              cmd = call(["./msmc2_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"-p1*2+15*1+1*2","--fixedRecombination","-o",outdir+'2hap_fixeddef'+'%02d_%s' %(hap_counter,outputprefix),filename])
               call (["./msmc2_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"-p1*2+15*1+1*2","--fixedRecombination","-o",outdir+'2hap_fixeddef'+'%02d_%s' %(hap_counter,outputprefix),filename])
               hap_counter += 1
               index_counter += 2
               index_counter_1 += 2    
       else:
-                hap_counter = 1
-                index_counter = 0
-                index_counter_1 = 1
-                continue
+              hap_counter = 1
+              index_counter = 0
+              index_counter_1 = 1
+              continue
             
     if filename.endswith("_reduced.multihetsep.txt"): # call MSMC2 with desired parameters on specified input files
         while hap_counter < 27:
               outputprefix = filename[:31]
-              cmd =call(["./msmc2_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"-p1*2+15*1+1*2","--fixedRecombination","-o",outdir+'2hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),filename])
               call (["./msmc2_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"-p1*2+15*1+1*2","--fixedRecombination","-o",outdir+'2hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),filename])
               hap_counter += 1
               index_counter += 2
               index_counter_1 += 2    
         else:
-                hap_counter = 1
-                index_counter = 0
-                index_counter_1 = 1
-                continue
+             hap_counter = 1
+             index_counter = 0
+             index_counter_1 = 1
+             continue
     
     else:   
         print("Specify valid input files.")
