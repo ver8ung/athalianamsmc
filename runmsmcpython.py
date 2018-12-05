@@ -23,7 +23,7 @@ index_input = "%s,%s" %(index_counter,index_counter_1) # currently obsolete
 for filename in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix
     if filename.endswith(".multihetsep.txt"): # call MSMC with desired parameters on specified input files
       while hap_counter < 27:
-              outputprefix = filename[:23]   # use only desired positions of input filenames as output prefix
+              outputprefix = filename[:24]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"-p1*2+15*1+1*2","-R","-o",outdir+'2hap_fixeddef'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2
@@ -37,7 +37,7 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
 for filename in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix
     if filename.endswith(".multihetsep.txt"): # call MSMC with desired parameters on specified input files
       while hap_counter < 27:
-              outputprefix = filename[:23]   # use only desired positions of input filenames as output prefix
+              outputprefix = filename[:24]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3),"-p1*2+15*1+1*2","-R","-o",outdir+'4hap_fixeddef'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2
@@ -55,7 +55,7 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
 for filename in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix          
     if filename.endswith(".multihetsep.txt"): # call MSMC with desired parameters on specified input files
           while hap_counter < 27:
-              outputprefix = filename[:23]   # use only desired positions of input filenames as output prefix
+              outputprefix = filename[:24]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5),"-p1*2+15*1+1*2","-R","-o",outdir+'6hap_fixeddef'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2
@@ -77,7 +77,7 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
 for filename in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix           
     if filename.endswith(".multihetsep.txt"): # call MSMC with desired parameters on specified input files
           while hap_counter < 27:
-              outputprefix = filename[:23]   # use only desired positions of input filenames as output prefix
+              outputprefix = filename[:24]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5,index_counter_6,index_counter_7),"-p1*2+15*1+1*2","-R","-o",outdir+'8hap_fixeddef'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2
@@ -103,7 +103,7 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
 for filename in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix           
     if filename.endswith(".multihetsep_reduced.txt"): # call MSMC with desired parameters on specified input files
         while hap_counter < 27:
-              outputprefix = filename[:31]
+              outputprefix = filename[:32]
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"-p1*2+15*1+1*2","-R","-o",outdir+'2hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2
@@ -117,7 +117,7 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
 for filename in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix       
     if filename.endswith(".multihetsep_reduced.txt"): # call MSMC with desired parameters on specified input files
       while hap_counter < 27:
-              outputprefix = filename[:31]   # use only desired positions of input filenames as output prefix
+              outputprefix = filename[:32]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3),"-p1*2+15*1+1*2","-R","-o",outdir+'4hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2
@@ -135,7 +135,7 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
 for filename in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix            
     if filename.endswith(".multihetsep_reduced.txt"): # call MSMC with desired parameters on specified input files
           while hap_counter < 27:
-              outputprefix = filename[:31]   # use only desired positions of input filenames as output prefix
+              outputprefix = filename[:32]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5),"-p1*2+15*1+1*2","-R","-o",outdir+'6hap_fixeddef_reduced'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2
@@ -157,7 +157,7 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
 for filename in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix          
     if filename.endswith(".multihetsep_reduced.txt"): # call MSMC with desired parameters on specified input files
           while hap_counter < 27:
-              outputprefix = filename[:31]   # use only desired positions of input filenames as output prefix
+              outputprefix = filename[:32]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5,index_counter_6,index_counter_7),"-p1*2+15*1+1*2","-R","-o",outdir+'8hap_fixeddef_reduced'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2

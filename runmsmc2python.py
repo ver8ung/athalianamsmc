@@ -39,9 +39,9 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
               index_counter_1 = 1
               continue
             
-    if filename.endswith("_reduced.multihetsep.txt"): # call MSMC2 with desired parameters on specified input files
+    if filename.endswith("multihetsep_reduced.txt"): # call MSMC2 with desired parameters on specified input files
         while hap_counter < 27:
-              outputprefix = filename[:31]
+              outputprefix = filename[:31] + '.msmc2'
               call (["./msmc2_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"-p1*2+15*1+1*2","--fixedRecombination","-o",outdir+'2hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),filename])
               hap_counter += 1
               index_counter += 2
