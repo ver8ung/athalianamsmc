@@ -40,10 +40,10 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
               outputprefix = filename[:24]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3),"-p1*2+15*1+1*2","-R","-o",outdir+'4hap_fixeddef'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
-              index_counter += 2
-              index_counter_1 += 2
-              index_counter_2 += 2
-              index_counter_3 += 2
+              index_counter += 4
+              index_counter_1 += 4
+              index_counter_2 += 4
+              index_counter_3 += 4
               continue
       else:
               hap_counter = 1
@@ -59,11 +59,11 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5),"-p1*2+15*1+1*2","-R","-o",outdir+'6hap_fixeddef'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2
-              index_counter_1 += 2
-              index_counter_2 += 2
-              index_counter_3 += 2
-              index_counter_4 += 2
-              index_counter_5 += 2
+              index_counter_1 += 6
+              index_counter_2 += 6
+              index_counter_3 += 6
+              index_counter_4 += 6
+              index_counter_5 += 6
               continue
           else:
               hap_counter = 1
@@ -81,13 +81,13 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5,index_counter_6,index_counter_7),"-p1*2+15*1+1*2","-R","-o",outdir+'8hap_fixeddef'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
               index_counter += 2
-              index_counter_1 += 2
-              index_counter_2 += 2
-              index_counter_3 += 2
-              index_counter_4 += 2
-              index_counter_5 += 2
-              index_counter_6 += 2
-              index_counter_7 += 2
+              index_counter_1 += 8
+              index_counter_2 += 8
+              index_counter_3 += 8
+              index_counter_4 += 8
+              index_counter_5 += 8
+              index_counter_6 += 8
+              index_counter_7 += 8
               continue
           else:
               hap_counter = 1
@@ -121,10 +121,10 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
               outputprefix = filename[:32]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3),"-p1*2+15*1+1*2","-R","-o",outdir+'4hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
-              index_counter += 2
-              index_counter_1 += 2
-              index_counter_2 += 2
-              index_counter_3 += 2
+              index_counter += 4
+              index_counter_1 += 4
+              index_counter_2 += 4
+              index_counter_3 += 4
               continue
       else:
               hap_counter = 1
@@ -139,12 +139,12 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
               outputprefix = filename[:32]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5),"-p1*2+15*1+1*2","-R","-o",outdir+'6hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
-              index_counter += 2
-              index_counter_1 += 2
-              index_counter_2 += 2
-              index_counter_3 += 2
-              index_counter_4 += 2
-              index_counter_5 += 2
+              index_counter += 6
+              index_counter_1 += 6
+              index_counter_2 += 6
+              index_counter_3 += 6
+              index_counter_4 += 6
+              index_counter_5 += 6
               continue
           else:
               hap_counter = 1
@@ -161,14 +161,14 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
               outputprefix = filename[:32]   # use only desired positions of input filenames as output prefix
               call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5,index_counter_6,index_counter_7),"-p1*2+15*1+1*2","-R","-o",outdir+'8hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),input_directory+filename])
               hap_counter += 1
-              index_counter += 2
-              index_counter_1 += 2
-              index_counter_2 += 2
-              index_counter_3 += 2
-              index_counter_4 += 2
-              index_counter_5 += 2
-              index_counter_6 += 2
-              index_counter_7 += 2
+              index_counter += 8
+              index_counter_1 += 8
+              index_counter_2 += 8
+              index_counter_3 += 8
+              index_counter_4 += 8
+              index_counter_5 += 8
+              index_counter_6 += 8
+              index_counter_7 += 8
               continue
           else:
               hap_counter = 1
