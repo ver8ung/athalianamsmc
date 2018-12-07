@@ -13,4 +13,3 @@ features up until now:
 
 ToDo:
 - include rho_fixed, rho_unfixed scenarios in the code
-- adjust counter increase steps for 4,6,8 haplotypes !
