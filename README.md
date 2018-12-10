@@ -14,3 +14,4 @@ features up until now:
 
 ToDo:
 - all chromosome runs
+- general strategy : one big script with this approach or multiple smaller ones that can be run together in a batch job file ?!
