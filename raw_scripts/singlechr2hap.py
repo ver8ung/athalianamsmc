@@ -3,6 +3,7 @@
 #$ -N python_MSMC1_fixedRecombination_singlechr
 #$ -M max.ruscheweyh@tum.de
 #$-cwd
+######SGE job parameters
 """
 Created on Thu Nov 29 11:26:54 2018
 @author: m.ruscheweyh
