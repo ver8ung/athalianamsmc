@@ -4,8 +4,7 @@ scripts for MSMC analysis of A.thaliana populations
 currently WIP
 
 features up until now:
-- script should now work for the --fixedRecombination scenario
-- included -rhoOverMu + -rhoOverMu,fixed scenarios
+- includes default fixedRecombination,-rhoOverMu,and -rhoOverMu+ fixedRecombination scenarios
 - read input files from destination / store filenames
 - run MSMC/MSMC2 on .multihetsep.txt files and _reduced.multihetsep.txt files
 - fixed time segmenting pattern for single chromosome runs
