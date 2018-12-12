@@ -847,6 +847,7 @@ for filename in os.listdir(input_rho_3): # retrieve filenames in input_directory
               index_counter_6 = 6
               index_counter_7 = 7
               continue 
+          
 for filename in os.listdir(input_rho_4): # retrieve filenames in input_directory for output prefix
     if filename.endswith(".multihetsep.txt"): # call MSMC with desired parameters on specified input files
           while hap_counter < 27:
