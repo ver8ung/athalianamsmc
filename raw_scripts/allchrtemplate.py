@@ -18,7 +18,7 @@ input_rho_4 = "/data/home/users/m.ruscheweyh/pythontest/input/chr4/"
 input_rho_5 = "/data/home/users/m.ruscheweyh/pythontest/input/chr5/"
 outdir = "output/msmc/"; # specifies output directory
 outdir_rho = "output/msmc/rho_runs/"
-outdir_allchr = "output/msmc/allchr"
+outdir_allchr = "output/msmc/allchr/"
 all_chr_input_madeira = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeira*.multihetsep.txt")
 all_chr_input_madeira_reduced = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeira*.multihetsep_reduced.txt")
 all_chr_input_spain = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/spain*.multihetsep.txt")
@@ -69,7 +69,7 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
     if filename.endswith(".multihetsep_reduced.txt"): # call MSMC with desired parameters on specified input files
       while hap_counter < 27:
               outputprefix = filename[:31]   # use only desired positions of input filenames as output prefix
-              call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3),"-p1*2+15*1+1*2","-R","-o",outdir+'4hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),"%s" %(all_chr_input_madeira[0]),"%s" %(all_chr_input_madeira[1]),"%s" %(all_chr_input_madeira[2]),"%s" %(all_chr_input_madeira[3]),"%s" %(all_chr_input_madeira[4])])
+              call (["./msmc_1.1.0_linux64bit","-I","%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3),"-R","-r",str(r_average),"-o",outdir+'4hap_fixeddef_nocent'+'%02d_%s' %(hap_counter,outputprefix),"%s" %(all_chr_input_madeira[0]),"%s" %(all_chr_input_madeira[1]),"%s" %(all_chr_input_madeira[2]),"%s" %(all_chr_input_madeira[3]),"%s" %(all_chr_input_madeira[4])])
               hap_counter += 1
               index_counter += 4
               index_counter_1 += 4
