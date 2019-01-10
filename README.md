@@ -1,5 +1,5 @@
 # athalianamsmc
-scripts for MSMC analysis of A.thaliana populations
+scripts for MSMC analysis of A.thaliana effective population size history
 
 currently WIP
 
@@ -15,3 +15,5 @@ features up until now:
 ToDo:
 - implement all chromosome runs into the final script
 - general strategy : one big script with this approach or multiple smaller ones that can be run together in a batch job file ?!
+- streamline the process more, maybe use fnmatch module 
+- implement cross coalescence runs
