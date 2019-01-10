@@ -17,3 +17,4 @@ ToDo:
 - general strategy : one big script with this approach or multiple smaller ones that can be run together in a batch job file ?!
 - streamline the process more, maybe use fnmatch module 
 - implement cross coalescence runs
+- refine plotting scripts, incorporate into pipeline ?!
