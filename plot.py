@@ -14,13 +14,13 @@ mu = 7e-9
 gen = 1
 ####################################
 
-os.chdir("/data/home/users/m.ruscheweyh/msmc/")
+os.chdir("/data/home/users/m.ruscheweyh/msmc/pop_results_wholechr_allchr")
 ###################################
 #plotting##########################
-afrDat = pd.read_csv("/path/to/AFR.msmc2.final.txt", delim_whitespace=True)
-eurDat = pd.read_csv("/path/to/EUR.msmc2.final.txt", delim_whitespace=True)
-plt.step(afrDat["left_time_boundary"]/mu*gen, (1/afrDat["lambda"])/(2*mu), label="AFR")
-plt.step(eurDat["left_time_boundary"]/mu*gen, (1/eurDat["lambda"])/(2*mu), label="EUR")
+Mad2hap = pd.read_csv("Madeira2hapfd_pop1fixeddef_all.msmc2.final.txt", delim_whitespace=True)
+Spain2hap = pd.read_csv("Spain/Spain2hapfd_pop1fixeddef_all.msmc2.final.txt", delim_whitespace=True)
+plt.step(Mad2hap["left_time_boundary"]/mu*gen, (1/Mad2hap["lambda"])/(2*mu), label="Madeira_2haplotypes_fixeddef")
+plt.step(Spain2hap["left_time_boundary"]/mu*gen, (1/Spain2hap["lambda"])/(2*mu), label="Spain_2haplotypes_fixeddef")
 plt.ylim(0,40000)
 plt.xlabel("years ago");
 plt.ylabel("effective population size");
