@@ -50,6 +50,11 @@ r_chr4 = 5.4286
 r_chr5 = 5.1429
 r_average =  5.1143
 
+
+##################################################################################################################################################################################################################################
+##################################################################################################################################################################################################################################
+##MSMC2_2/4/6/8_haplotype_fixedRecombination_default_rhoOverMu runs
+
 for filename in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix
     if filename.endswith(".multihetsep.txt"): # call MSMC2 with desired parameters on specified input files
       while hap_counter < 27:
@@ -214,6 +219,9 @@ for filename in os.listdir(input_directory): # retrieve filenames in input_direc
 
 ##########################################################################################################################################################################################################################################################################################################################################
 ################Runs with chromosome specific rhoOverMu###################################################################################################################################################################################################################################################################################
+##MSMC2_2/4/6/8_haplotype_fixedRecombination_specific_rhoOverMu = rhofixed
+##MSMC2_2/4/6/8_haplotype_specific_rhoOverMu runs = rho
+
 for filename in os.listdir(input_rho_1): # retrieve filenames in input_directory for output prefix
     if filename.endswith(".multihetsep.txt"): # call MSMC with desired parameters on specified input files
       while hap_counter < 27:
@@ -869,7 +877,7 @@ for filename in os.listdir(input_rho_4): # retrieve filenames in input_directory
     if filename.endswith(".multihetsep.txt"): # call MSMC with desired parameters on specified input files
           while hap_counter < 27:
               outputprefix = filename[:14]   # use only desired positions of input filenames as output prefix
-              call (["./msmc2_linux64bit","-I","%s,%s,%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5,index_counter_6,index_counter_7),"-p1*2+15*1+1*2","-R","-r",str(r_chr4),"-o",outdir+'8hap_rhofixedf'+'%02d_%s' %(hap_counter,outputprefix),input_rho_4+filename])
+              call (["./msmc2_linux64bit","-I","%s,%s,%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5,index_counter_6,index_counter_7),"-p1*2+15*1+1*2","-R","-r",str(r_chr4),"-o",outdir+'8hap_rhofixed'+'%02d_%s' %(hap_counter,outputprefix),input_rho_4+filename])
               hap_counter += 1
               index_counter += 2
               index_counter_1 += 8
