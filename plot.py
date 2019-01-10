@@ -8,9 +8,15 @@ Created on Thu Jan 10 15:10:33 2019
 import os
 import matplotlib.pyplot as plt
 import pandas as pd
+
+#Parameters for Arabidopsis thaliana
+mu = 7e-9
+gen = 1
+####################################
+
 os.chdir("/data/home/users/m.ruscheweyh/msmc/")
-mu = 1.25e-8
-gen = 30
+###################################
+#plotting##########################
 afrDat = pd.read_csv("/path/to/AFR.msmc2.final.txt", delim_whitespace=True)
 eurDat = pd.read_csv("/path/to/EUR.msmc2.final.txt", delim_whitespace=True)
 plt.step(afrDat["left_time_boundary"]/mu*gen, (1/afrDat["lambda"])/(2*mu), label="AFR")
