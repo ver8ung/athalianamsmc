@@ -13,8 +13,8 @@ features up until now:
 - iterates over up to 28 haplotypes in the input (2,4,6,8 haplotypes with fixed recombination)
 
 ToDo:
-- implement all chromosome runs into the final script
 - general strategy : one big script with this approach or multiple smaller ones that can be run together in a batch job file ?!
-- streamline the process more, maybe use fnmatch module 
+- implement all chromosome runs into the final script
 - implement cross coalescence runs
-- refine plotting scripts, incorporate into pipeline ?!
+- final testing of combined analysis and plotting scripts
+- refine the code, use fnmatch if feasible
