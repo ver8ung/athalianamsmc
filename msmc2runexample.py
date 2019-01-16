@@ -64,7 +64,7 @@ for file in os.listdir(input_directory): # retrieve filenames in input_directory
               plt.gca().set_xscale('log')
               plt.legend(loc=0)
               os.chdir("/data/home/users/m.ruscheweyh/MSMCresults/pyplots/scripttest")
-              plt.savefig("test1.png")
+             plt.savefig(outputprefix + ".png")
               os.chdir(input_directory)
               hap_counter += 1
               index_counter += 2
