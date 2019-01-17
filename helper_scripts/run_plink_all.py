@@ -1,51 +1,57 @@
 #!/usr/bin/env python2
-# -*- coding: utf-8 -*-
+# -*- encoding: iso-8859-15 -*-
 """
 Created on Wed Jan 16 15:08:47 2019
 
 @author: m.ruscheweyh
 """
 
-import os, glob, fnmatch
+import os, glob
 from subprocess import call
 
 input_directory = "/data/home/users/m.ruscheweyh/plink/input"
 outdir = "/data/home/users/m.ruscheweyh/plink/output"
+sample_list = sorted(glob.glob("/data/home/users/m.ruscheweyh/plink/input/*.vcf.gz"))
+sample_string = str(sample_list)
+range_spain = sample_string.count('Spain') 
+range_sweden = sample_string.count('Sweden') + range_spain
+range_tubingen = sample_string.count('tubingen')
+range_madeira = sample_string.count('madeira')
 
-sample_list = glob.glob("/data/home/users/m.ruscheweyh/plink/input/*.vcf.gz")
+Madeira = 'madeira'
+Spaina = 'Spain'
+Sweden = 'Sweden'
+Tubingen = 'Tübingen'
 item_counter = 0
+sample_list.count('Spain')
 
-for file in os.listdir(input_directory):        
-         if fnmatch.fnmatch(file, "Spain*.vcf.gz"):
-            while item_counter < len(sample_list):
-              outputprefix = str(sample_list[item_counter])[42:52]   
-              call (["./plink","--threads","8","--make-bed","--allow-extra-chr","--chr","1-5","--vcf","%s" %(sample_list[item_counter]), "--out","%s/%s" %(outdir,outputprefix)])
-              item_counter +=1
-              continue
-         else:
+while item_counter < len(sample_list):
+    for Spain in os.listdir(input_directory): 
+        while item_counter < 7:
+            spain_name = str(sample_list[item_counter][42:52])
+            call (["./plink","--threads","8","--make-bed","--allow-extra-chr","--chr","1-5","--vcf","%s" %(sample_list[item_counter]), "--out","%s/%s" %(outdir,spain_name)])
+            item_counter += 1
             continue
         
-         if fnmatch.fnmatch(file, "Sweden*.vcf.gz"):
-                while item_counter < len(sample_list):
-                    outputprefix = str(sample_list[item_counter])[42:55]
-                    call (["./plink","--threads","8","--make-bed","--allow-extra-chr","--chr","1-5","--vcf","%s" %(sample_list[item_counter]), "--out","%s/%s" %(outdir,outputprefix)])
-                    item_counter +=1
-                    continue
-         else: 
+    for Sweden in os.listdir(input_directory):
+        while item_counter < 17:
+            sweden_name = str(sample_list[item_counter][42:53])
+            call (["./plink","--threads","8","--make-bed","--allow-extra-chr","--chr","1-5","--vcf","%s" %(sample_list[item_counter]), "--out","%s/%s" %(outdir,sweden_name)])
+            item_counter += 1
             continue
         
-         if fnmatch.fnmatch(file, "Tübingen*.vcf.gz"):
-                while item_counter < len(sample_list):
-                    outputprefix = str(sample_list[item_counter])[42:62]
-                    call (["./plink","--threads","8","--make-bed","--allow-extra-chr","--chr","1-5","--vcf","%s" %(sample_list[item_counter]), "--out","%s/%s" %(outdir,outputprefix)])
-                    item_counter +=1
-                    continue
-                
-         if fnmatch.fnmatch(file, "madeira*.vcf.gz"):
-            while item_counter < len(sample_list):
-              outputprefix = str(sample_list[item_counter])[42:59]   
-              call (["./plink","--threads","8","--make-bed","--allow-extra-chr","--chr","1-5","--vcf","%s" %(sample_list[item_counter]), "--out","%s/%s" %(outdir,outputprefix)])
-              item_counter +=1
-              continue
-         else:
+    for Tubingen in os.listdir(input_directory): 
+        while item_counter < 32:
+            tubingen_name = str(sample_list[item_counter][42:56])
+            call (["./plink","--threads","8","--make-bed","--allow-extra-chr","--chr","1-5","--vcf","%s" %(sample_list[item_counter]), "--out","%s/%s" %(outdir,tubingen_name)])
+            item_counter += 1
             continue
+        
+    for Madeira in os.listdir(input_directory): 
+        while item_counter < len(sample_list):
+            madeira_name = str(sample_list[item_counter][42:55])
+            call (["./plink","--threads","8","--make-bed","--allow-extra-chr","--chr","1-5","--vcf","%s" %(sample_list[item_counter]), "--out","%s/%s" %(outdir,madeira_name)])
+            item_counter += 1
+            continue
+    else:
+        break
