@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jan 10 15:10:33 2019
@@ -38,8 +38,12 @@ input_rho_5 = "/data/home/users/m.ruscheweyh/pythontest/input/chr5/"
 all_chr_input_madeira = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeira*.multihetsep.txt")
 outdir = "output/msmc2/" # specifies output directory
 outdir_allchr = "output/msmc2/allchr/"
+sample_list = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/*.multihetsep.txt"))
+sample_string = str(sample_list)
+
 hap_counter = 1     # counter for iteration over haplotype combinations, determines file output prefix, default prefix "01_"
 index_counter = 0   # counters for the -I parameter of MSMC, iterates over x-amount of haplotypes in pairs of x-indexes
+run_counter = 0
 index_counter_1 = 1 #######################################################################################################
 index_counter_2 = 2 #######################################################################################################
 index_counter_3 = 3 #######################################################################################################
@@ -48,10 +52,9 @@ index_counter_5 = 5 ############################################################
 index_counter_6 = 6 #######################################################################################################
 index_counter_7 = 7 #######################################################################################################
 
-for file in os.listdir(input_directory): # retrieve filenames in input_directory for output prefix
-    if fnmatch.fnmatch(file, "madeiraFDchr1.multihetsep.txt"): # call MSMC with desired parameters on specified input files
-      while hap_counter < 27:
-              outputprefix = file[:13]   # use only desired positions of input filenames as output prefix
+while run_counter < 1:
+         while hap_counter < 27:
+              outputprefix = "MadeiraFD"   # use only desired positions of input filenames as output prefix
               call (["./msmc2_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"--fixedRecombination","-r",str(r_average),"-o",outdir_allchr+'2hap_rhofixed_allchr'+'%02d_%s' %(hap_counter,outputprefix),"%s" %(all_chr_input_madeira[0]),"%s" %(all_chr_input_madeira[1]),"%s" %(all_chr_input_madeira[2]),"%s" %(all_chr_input_madeira[3]),"%s" %(all_chr_input_madeira[4])])
               result_name = '2hap_rhofixed_allchr'+'%02d_%s' %(hap_counter,outputprefix) + '.final.txt'
               os.chdir(outdir_allchr)
@@ -64,14 +67,15 @@ for file in os.listdir(input_directory): # retrieve filenames in input_directory
               plt.gca().set_xscale('log')
               plt.legend(loc=0)
               os.chdir("/data/home/users/m.ruscheweyh/MSMCresults/pyplots/scripttest")
-             plt.savefig(outputprefix + ".png")
-              os.chdir(input_directory)
+              plt.savefig(result_name + ".png")
+              os.chdir("/data/home/users/m.ruscheweyh/pythontest")
               hap_counter += 1
               index_counter += 2
               index_counter_1 += 2
               continue
-      else:
+         else:
               hap_counter = 1
               index_counter = 0
               index_counter_1 = 1
-              continue
+              run_counter +=1
+             
