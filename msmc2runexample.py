@@ -5,7 +5,7 @@ Created on Thu Jan 10 15:10:33 2019
 
 @author: m.ruscheweyh
 """
-import os, glob, fnmatch
+import os, glob
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -36,6 +36,7 @@ input_rho_3 = "/data/home/users/m.ruscheweyh/pythontest/input/chr3/"
 input_rho_4 = "/data/home/users/m.ruscheweyh/pythontest/input/chr4/"
 input_rho_5 = "/data/home/users/m.ruscheweyh/pythontest/input/chr5/"
 all_chr_input_madeira = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeira*.multihetsep.txt")
+all_chr_input_spain = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/spain*.multihetsep.txt")
 outdir = "output/msmc2/" # specifies output directory
 outdir_allchr = "output/msmc2/allchr/"
 sample_list = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/*.multihetsep.txt"))
@@ -53,10 +54,10 @@ index_counter_6 = 6 ############################################################
 index_counter_7 = 7 #######################################################################################################
 
 while run_counter < 1:
-         while hap_counter < 27:
+         while index_counter < 27:
               outputprefix = "MadeiraFD"   # use only desired positions of input filenames as output prefix
-              call (["./msmc2_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"--fixedRecombination","-r",str(r_average),"-o",outdir_allchr+'2hap_rhofixed_allchr'+'%02d_%s' %(hap_counter,outputprefix),"%s" %(all_chr_input_madeira[0]),"%s" %(all_chr_input_madeira[1]),"%s" %(all_chr_input_madeira[2]),"%s" %(all_chr_input_madeira[3]),"%s" %(all_chr_input_madeira[4])])
-              result_name = '2hap_rhofixed_allchr'+'%02d_%s' %(hap_counter,outputprefix) + '.final.txt'
+              call (["./msmc2_linux64bit","-I","%s,%s" %(index_counter,index_counter_1),"-r",str(r_average),"-o",outdir_allchr+'2hap_rhofixed_allchr'+'%02d_%s' %(hap_counter,outputprefix),"%s" %(all_chr_input_madeira[0]),"%s" %(all_chr_input_madeira[1]),"%s" %(all_chr_input_madeira[2]),"%s" %(all_chr_input_madeira[3]),"%s" %(all_chr_input_madeira[4])])
+              result_name = '2hap_rho_allchr'+'%02d_%s' %(hap_counter,outputprefix) + '.final.txt'
               os.chdir(outdir_allchr)
               plot_input = pd.read_csv("%s" %(result_name), delim_whitespace=True)
               figure(num=None, figsize=(10, 8), dpi=100, facecolor='w', edgecolor='k')
@@ -78,4 +79,3 @@ while run_counter < 1:
               index_counter = 0
               index_counter_1 = 1
               run_counter +=1
-             
