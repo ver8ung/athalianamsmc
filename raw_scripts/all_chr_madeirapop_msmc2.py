@@ -35,7 +35,7 @@ input_rho_2 = "/data/home/users/m.ruscheweyh/pythontest/input/chr2/"
 input_rho_3 = "/data/home/users/m.ruscheweyh/pythontest/input/chr3/"
 input_rho_4 = "/data/home/users/m.ruscheweyh/pythontest/input/chr4/"
 input_rho_5 = "/data/home/users/m.ruscheweyh/pythontest/input/chr5/"
-all_chr_input_madeira = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeira*.multihetsep.txt")
+all_chr_input_madeira = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeira*.multihetsep.txt"))
 all_chr_input_spain = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/spain*.multihetsep.txt")
 outdir = "output/msmc2/" # specifies output directory
 outdir_allchr = "output/msmc2/allchr/"
@@ -113,7 +113,7 @@ while run_counter < 2 :
 while run_counter < 3 :
     while index_counter < 27:
              outputprefix = "MadeiraFD"   # use only desired positions of input filenames as output prefix
-             call (["./msmc2_linux64bit","-I","%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5),"-r",str(r_average),"-o",outdir+'6hap_rho_allchr'+'%02d_%s' %(hap_counter,outputprefix),"%s" %(all_chr_input_madeira[0]),"%s" %(all_chr_input_madeira[1]),"%s" %(all_chr_input_madeira[2]),"%s" %(all_chr_input_madeira[3]),"%s" %(all_chr_input_madeira[4])])
+             call (["./msmc2_linux64bit","-I","%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5),"-r",str(r_average),"-o",outdir_allchr+'6hap_rho_allchr'+'%02d_%s' %(hap_counter,outputprefix),"%s" %(all_chr_input_madeira[0]),"%s" %(all_chr_input_madeira[1]),"%s" %(all_chr_input_madeira[2]),"%s" %(all_chr_input_madeira[3]),"%s" %(all_chr_input_madeira[4])])
              result_name = '6hap_rho_allchr'+'%02d_%s' %(hap_counter,outputprefix) + '.final.txt'
              os.chdir(outdir_allchr)
              plot_input = pd.read_csv("%s" %(result_name), delim_whitespace=True)
@@ -147,7 +147,7 @@ while run_counter < 3 :
 while run_counter < 4:
     while index_counter < 27:
              outputprefix = "MadeiraFD"   # use only desired positions of input filenames as output prefix´
-             call (["./msmc2_linux64bit","-I","%s,%s,%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5,index_counter_6,index_counter_7),"-r",str(r_average),"-o",outdir+'8hap_rho_allchr'+'%02d_%s' %(hap_counter,outputprefix),"%s" %(all_chr_input_madeira[0]),"%s" %(all_chr_input_madeira[1]),"%s" %(all_chr_input_madeira[2]),"%s" %(all_chr_input_madeira[3]),"%s" %(all_chr_input_madeira[4])])
+             call (["./msmc2_linux64bit","-I","%s,%s,%s,%s,%s,%s,%s,%s" %(index_counter,index_counter_1,index_counter_2,index_counter_3,index_counter_4,index_counter_5,index_counter_6,index_counter_7),"-r",str(r_average),"-o",outdir_allchr+'8hap_rho_allchr'+'%02d_%s' %(hap_counter,outputprefix),"%s" %(all_chr_input_madeira[0]),"%s" %(all_chr_input_madeira[1]),"%s" %(all_chr_input_madeira[2]),"%s" %(all_chr_input_madeira[3]),"%s" %(all_chr_input_madeira[4])])
              result_name = '8hap_rho_allchr'+'%02d_%s' %(hap_counter,outputprefix) + '.final.txt'
              os.chdir(outdir_allchr)
              plot_input = pd.read_csv("%s" %(result_name), delim_whitespace=True)
