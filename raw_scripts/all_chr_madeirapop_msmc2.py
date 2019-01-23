@@ -21,11 +21,6 @@ mu = 7e-9
 gen = 1
 ###################################
 #rhoOverMu
-r_chr1 = 4.587
-r_chr2 = 5.1429
-r_chr3 = 5
-r_chr4 = 5.4286
-r_chr5 = 5.1429
 r_average =  5.1143
 
 #variables for the script
