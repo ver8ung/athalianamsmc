@@ -30,13 +30,7 @@ r_average =  5.1143
 
 #variables for the script
 input_directory = "/data/home/users/m.ruscheweyh/pythontest/input/" # specify input directory
-input_rho_1 = "/data/home/users/m.ruscheweyh/pythontest/input/chr1/"
-input_rho_2 = "/data/home/users/m.ruscheweyh/pythontest/input/chr2/"
-input_rho_3 = "/data/home/users/m.ruscheweyh/pythontest/input/chr3/"
-input_rho_4 = "/data/home/users/m.ruscheweyh/pythontest/input/chr4/"
-input_rho_5 = "/data/home/users/m.ruscheweyh/pythontest/input/chr5/"
 all_chr_input_madeira = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeira*.multihetsep.txt"))
-all_chr_input_spain = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/spain*.multihetsep.txt")
 outdir = "output/msmc2/" # specifies output directory
 outdir_allchr = "output/msmc2/allchr/"
 sample_list = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/*.multihetsep.txt"))
@@ -126,6 +120,7 @@ while run_counter < 3 :
              plt.legend(loc=0)
              os.chdir("/data/home/users/m.ruscheweyh/MSMCresults/pyplots/scripttest")
              plt.savefig(result_name + ".png")
+             os.chdir("/data/home/users/m.ruscheweyh/pythontest")
              hap_counter += 1
              index_counter += 6
              index_counter_1 += 6
@@ -160,6 +155,7 @@ while run_counter < 4:
              plt.legend(loc=0)
              os.chdir("/data/home/users/m.ruscheweyh/MSMCresults/pyplots/scripttest")
              plt.savefig(result_name + ".png")
+             os.chdir("/data/home/users/m.ruscheweyh/pythontest")
              hap_counter += 1
              index_counter += 8
              index_counter_1 += 8
