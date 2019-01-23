@@ -36,7 +36,6 @@ input_rho_3 = "/data/home/users/m.ruscheweyh/pythontest/input/chr3/"
 input_rho_4 = "/data/home/users/m.ruscheweyh/pythontest/input/chr4/"
 input_rho_5 = "/data/home/users/m.ruscheweyh/pythontest/input/chr5/"
 all_chr_input_madeira = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeira*.multihetsep.txt")
-all_chr_input_spain = glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/spain*.multihetsep.txt")
 outdir = "output/msmc2/" # specifies output directory
 outdir_allchr = "output/msmc2/allchr/"
 sample_list = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/*.multihetsep.txt"))
