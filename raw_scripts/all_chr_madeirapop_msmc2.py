@@ -21,11 +21,16 @@ mu = 7e-9
 gen = 1
 ###################################
 #rhoOverMu
+r_chr1 = 4.587
+r_chr2 = 5.1429
+r_chr3 = 5
+r_chr4 = 5.4286
+r_chr5 = 5.1429
 r_average =  5.1143
 
 #variables for the script
 input_directory = "/data/home/users/m.ruscheweyh/pythontest/input/" # specify input directory
-all_chr_input_madeira = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeira*.multihetsep.txt"))
+all_chr_input_madeira = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeiraFDchr*.multihetsep.txt"))
 outdir = "output/msmc2/" # specifies output directory
 outdir_allchr = "output/msmc2/allchr/"
 sample_list = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/*.multihetsep.txt"))
