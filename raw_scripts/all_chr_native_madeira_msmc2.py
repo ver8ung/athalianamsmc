@@ -55,7 +55,7 @@ while run_counter < 1:
               plot_input = pd.read_csv("%s" %(result_name), delim_whitespace=True)
               figure(num=None, figsize=(10, 8), dpi=100, facecolor='w', edgecolor='k')
               plt.step(plot_input["left_time_boundary"]/mu*gen, (1/plot_input["lambda"])/(2*mu), label="%s" %(result_name), color="black")
-              plt.ylim(50000,800000)
+              plt.ylim(10000,400000)
               plt.xlabel("years ago");
               plt.ylabel("effective population size");
               plt.gca().set_xscale('log')
