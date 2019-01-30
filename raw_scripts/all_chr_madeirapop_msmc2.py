@@ -33,8 +33,7 @@ input_directory = "/data/home/users/m.ruscheweyh/pythontest/input/" # specify in
 all_chr_input_madeira = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/madeiraFDchr*.multihetsep.txt"))
 outdir = "output/msmc2/" # specifies output directory
 outdir_allchr = "output/msmc2/allchr/"
-sample_list = sorted(glob.glob("/data/home/users/m.ruscheweyh/pythontest/input/*.multihetsep.txt"))
-sample_string = str(sample_list)
+
 hap_counter = 1     # counter for iteration over haplotype combinations, determines file output prefix, default prefix "01_"
 index_counter = 0   # counters for the -I parameter of MSMC, iterates over x-amount of haplotypes in pairs of x-indexes
 run_counter = 0
