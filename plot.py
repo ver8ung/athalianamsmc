@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.pyplot import figure
 
-#Parameters for Arabidopsis thaliana
-mu = 7e-9
-gen = 1
+#Parameters specific for Arabidopsis thaliana, needed to scale results accordingly
+mu = 7e-9 #mutation rate
+gen = 1 # generation time
 ####################################
 
 os.chdir("/data/home/users/m.ruscheweyh/msmc/pop_results_wholechr_allchr")
