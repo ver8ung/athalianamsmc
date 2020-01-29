@@ -8,6 +8,5 @@ features up until now:
 - plots the results of a single run after it completes
 
 ToDo:
-- general strategy : one big script with this approach or multiple smaller ones that can be run together in a batch job file ?!
 - implement cross coalescence runs
 - refine the code
